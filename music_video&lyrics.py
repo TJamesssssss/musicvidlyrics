@@ -15,9 +15,9 @@ from apiclient.discovery import build
 from bs4 import BeautifulSoup
 
 #YOUTUBE API KEY
-api_key = "AIzaSyCUdrlXAfwh0o81utBdoGEEgydXCjYJH0Q"
+api_key = "api_key"
 #GOOGLE API KEY
-gapi_key = "AIzaSyB4Ywdt8rgckomPnqumFabHSvNRrIF0rPU"
+gapi_key = "gapi_key"
 
 song_title = input("What song would you like to listen to? ")
 artist_name = input("Who is the artist of that song? ")
@@ -40,78 +40,5 @@ def genius_lyrics():
 
 youtube_music()
 genius_lyrics()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# base_url = "http://api.genius.com"
-# headers = {'Authorization': 'Bearer 8eT2FmQ4z6Wzb6_wgxuA31lwm4kpNappA-tzlFcBJbvqkoMRVvR8jiiK9HZ3ZUbn'}
-# song_api_path = ''
-
-# def music_lyrics(song_api_path):
-#     song_url = base_url + song_api_path    
-#     response = requests.get(song_url, headers=headers)
-#     json = response.json()
-#     print(json)
-#     path = json["response"]["song"]["path"]
-#     # have to do regular html scraping
-#     page_url = "http://genius.com" + path
-#     page = requests.get(page_url)
-#     html = BeautifulSoup(page.text, "html.parser")
-#     # have to remove script tags placed in lyrics
-#     [h.extract() for h in html('script')]
-#     lyrics = html.find("div", class_="lyrics").get_text()
-#     return lyrics
-
-# if __name__ == "__main__":
-#     search_url = base_url + "/search"
-#     data = {'q': song_title}
-#     response = requests.get(search_url, data=data, headers=headers)
-#     json = response.json()
-#     print(json)
-#     song_info = None
-#     for hit in json["response"]["hits"]:
-#         if hit["result"]["primary_artist"]["name"] == artist_name:
-#             song_info = hit
-#             break
-#     if song_info:
-#         song_api_path = song_info["result"]["api_path"]
-#         print(music_lyrics(song_api_path))
-
-# youtube_music()
-# music_lyrics(song_api_path)
-
-# google = build('google', 'v3', developerKey = gapi_key)
-
-# lsearch = google.search().list(q="{song_choce}")
-# test = lsearch.execute()
-# print(test)
-
-# webbrowser.open(f"https://www.azlyrics.com/lyrics/foofighters/learntofly.html")
-
-# for item in res['items']:
-#     print(item['snippet']['title'])
-
-# music = input("Choose your artist - song!")
-
-# url = "https://www.googleapis.com/youtube/v3/search"
-
-
-# response = requests.get(url, headers = {"Accept": "application/json"})
-
-# data = response.json()
-
-# print(data)
 
     
